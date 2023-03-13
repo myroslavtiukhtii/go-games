@@ -6,20 +6,22 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230311181516">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230313190255">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap&_v=20230311181516" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap&_v=20230313190255" rel="stylesheet">
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<picture><source srcset="img/header/header-main-logo.webp" type="image/webp"><img class="header__logo" src="img/header/header-main-logo.png" alt="Main logo Healas.lt" title="Healas.lt" width="286" height="78"></picture>
+				<a href="#">
+					<picture><source srcset="img/header/header-main-logo.webp" type="image/webp"><img class="header__logo" src="img/header/header-main-logo.png" alt="Main logo Healas.lt" title="Healas.lt" width="286" height="78"></picture>
+				</a>
 				<nav class="header__menu">
 					<ul class="header__list">
 						<li class="header__item">
@@ -168,12 +170,16 @@
 			</section>
 			<section class="glasess">
 				<div class="glasess__container">
-					<picture><source srcset="img/glasess/glasess_picture.webp" type="image/webp"><img class="glasses__picture" src="img/glasess/glasess_picture.png" alt="A man playing game console"></picture>
+					<div class="glasess__picture">
+						<picture><source srcset="img/glasess/glasess_picture-bg.webp" type="image/webp"><img class="glasess__circle" src="img/glasess/glasess_picture-bg.png" alt="Orange background circle"></picture>
+						<picture><source srcset="img/glasess/glasess_man.webp" type="image/webp"><img class="glasess__man" src="img/glasess/glasess_man.png" alt="A man playing game console"></picture>
+						<picture><source srcset="img/glasess/glasess_screen.webp" type="image/webp"><img class="glasess__screen" src="img/glasess/glasess_screen.png" alt="Screen with road"></picture>
+					</div>
 					<div class="glasess__text">
 						<div class="glasess__subtitle">
 							About VR Glasses
 						</div>
-						<h2 class="glasess__title">The New VR Glasses Series</h2>
+						<h2 class="glasess__title reveal fade-bottom">The New VR Glasses Series</h2>
 						<p class="glasess__paragraf">
 							It is a long established fact that a reader will
 							be distracted by the readable content of a page when
@@ -189,7 +195,7 @@
 				<div class="xbox__container">
 					<div class="xbox__text">
 						<div class="xbox__subtitle">About XBOX, PS</div>
-						<h2 class="xbox__title">The New Xbox, Ps Series</h2>
+						<h2 class="xbox__title reveal fade-bottom">The New Xbox, Ps Series</h2>
 						<p class="xbox__paragraf">
 							It is a long established fact that a reader
 							will be distracted by the readable content of
@@ -199,15 +205,166 @@
 						</p>
 						<button class="xbox__btn">Get Started Now</button>
 					</div>
+					<div class="xbox__picture">
+						<picture><source srcset="img/xbox/xbox_main-picture.webp" type="image/webp"><img class="xbox__controller" src="img/xbox/xbox_main-picture.png" alt="Xbox controller"></picture>
+						<picture><source srcset="img/xbox/xbox_big-circle.webp" type="image/webp"><img class="xbox__big-gear" src="img/xbox/xbox_big-circle.png" alt="Big dark blue gear"></picture>
+						<picture><source srcset="img/xbox/xbox_small-circle.webp" type="image/webp"><img class="xbox__small-gear" src="img/xbox/xbox_small-circle.png" alt="Small dark blue gear"></picture>
+					</div>
+				</div>
+			</section>
+			<section class="plans">
+				<div class="plans__container">
+					<div class="plans__subtitle">Our Pricing</div>
+					<h2 class="plans__title">Choose Your Plan</h2>
+					<div class="plans__swiper">
+						<div class="plans__list swiper-wrapper">
+							<div class="plans__block swiper-slide reveal fade-bottom">
+								<h3 class="block__title">Basic</h3>
+								<span class="block__price">$50.00
+									<span class="block__price--lower"> / Per Hour</span>
+								</span>
+								<ul class="plans__block__list">
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										2 GB of storage
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Email support
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Help center access
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+								</ul>
+								<button class="plans__btn">Select This Plan</button>
+							</div>
+							<div class="plans__block swiper-slide reveal fade-bottom">
+								<h3 class="block__title">Standart</h3>
+								<span class="block__price">$95.00
+									<span class="block__price--lower"> / Per Hour</span>
+								</span>
+								<ul class="plans__block__list">
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										2 GB of storage
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Email support
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Help center access
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+								</ul>
+								<button class="plans__btn">Select This Plan</button>
+							</div>
+							<div class="plans__block swiper-slide reveal fade-bottom">
+								<h3 class="block__title">Premium</h3>
+								<span class="block__price">$120.00
+									<span class="block__price--lower"> / Per Hour</span>
+								</span>
+								<ul class="plans__block__list">
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										2 GB of storage
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Email support
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										Help center access
+									</li>
+									<li class="block__list__item">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#plans_check"></use>
+										</svg>
+										10 users included
+									</li>
+								</ul>
+								<button class="plans__btn">Select This Plan</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<picture><source srcset="img/header/header-main-logo.webp" type="image/webp"><img class="footer__img" src="img/header/header-main-logo.png" alt="Main logo"></picture>
+				<div class="footer__copyrights">Copyright © 2022 HEALAS.LT. All Rights Reserved.</div>
+				<div class="footer__list">
+					<a class="footer__list__item" href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#footer-icon-facebook"></use>
+						</svg>
+					</a>
+					<a class="footer__list__item" href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#footer-icon-instagram"></use>
+						</svg>
+					</a>
+					<a class="footer__list__item" href="#">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#footer-icon-twitter"></use>
+						</svg>
+					</a>
+				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230311181516"></script>
+	<script src="js/app.min.js?_v=20230313190255"></script>
 </body>
 
 </html>
