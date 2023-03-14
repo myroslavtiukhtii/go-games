@@ -1557,6 +1557,10 @@ html.menu-open .page {
     width: 14.875rem;
   }
 
+  .footer__img {
+    height: 4.0625rem;
+  }
+
   .footer__copyrights {
     font-size: 1rem;
   }
@@ -1864,6 +1868,10 @@ html.menu-open .page {
 
   .footer__img {
     width: 9.375rem;
+  }
+
+  .footer__img {
+    height: 2.5rem;
   }
 
   .footer__copyrights {
@@ -2192,6 +2200,18 @@ html.menu-open .page {
 @supports not (width: clamp( 9.375rem , 7.375rem  +  10vw , 14.875rem )) {
     .footer__img {
       width: calc(9.375rem + 5.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (height: clamp( 2.5rem , 1.9318181818rem  +  2.8409090909vw , 4.0625rem )) {
+    .footer__img {
+      height: clamp( 2.5rem , 1.9318181818rem  +  2.8409090909vw , 4.0625rem );
+    }
+}
+
+@supports not (height: clamp( 2.5rem , 1.9318181818rem  +  2.8409090909vw , 4.0625rem )) {
+    .footer__img {
+      height: calc(2.5rem + 1.5625 * (100vw - 20rem) / 55);
     }
 }
 
