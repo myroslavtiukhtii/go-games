@@ -516,12 +516,8 @@ html.menu-open .page {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-  -webkit-animation-name: opaScale;
-          animation-name: opaScale;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation: teenagerAnimation 7s linear infinite;
+          animation: teenagerAnimation 7s linear infinite;
 }
 
 .about__picture .person__sparkle {
@@ -533,8 +529,8 @@ html.menu-open .page {
   max-width: 470px;
   -webkit-animation-name: sparklePulse;
           animation-name: sparklePulse;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -766,6 +762,8 @@ html.menu-open .page {
   width: 100%;
   height: auto;
   max-width: 300px;
+  -webkit-animation: teenagerAnimation 5s linear infinite;
+          animation: teenagerAnimation 5s linear infinite;
 }
 
 .glasess__picture .glasess__screen {
@@ -1218,27 +1216,37 @@ html.menu-open .page {
   }
 }
 
-@-webkit-keyframes opaScale {
+@-webkit-keyframes teenagerAnimation {
   0% {
-    opacity: 0;
-    scale: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
 
   100% {
-    opacity: 1;
-    scale: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
-@keyframes opaScale {
+@keyframes teenagerAnimation {
   0% {
-    opacity: 0;
-    scale: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
 
   100% {
-    opacity: 1;
-    scale: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
@@ -1249,8 +1257,8 @@ html.menu-open .page {
   }
 
   50% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
 
   100% {
@@ -1266,8 +1274,8 @@ html.menu-open .page {
   }
 
   50% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
 
   100% {
@@ -2745,9 +2753,9 @@ html.menu-open .page {
   }
 
   .about__picture .person__teenager:hover {
-    -webkit-transform: rotate(2deg);
-        -ms-transform: rotate(2deg);
-            transform: rotate(2deg);
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
 
   .glasess__btn:hover,
