@@ -145,6 +145,15 @@ svg path {
      object-fit: contain;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  outline: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-color: #FFE6D7;
 }
@@ -153,6 +162,36 @@ body {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+}
+
+.upbtn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(235, 132, 130, 0.3254901961);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  z-index: 99;
+}
+
+.upbtn:hover {
+  background-color: #EB8382;
 }
 
 .header {
@@ -228,16 +267,6 @@ body {
   transition: 0.3s ease-in;
 }
 
-.header__btn:hover,
-.header__btn:focus {
-  color: #4499D9;
-  border: 0.5px solid #4499D9;
-  -webkit-animation: pulse 0.5s;
-          animation: pulse 0.5s;
-  -webkit-box-shadow: 0 0 0 2em transparent;
-          box-shadow: 0 0 0 2em transparent;
-}
-
 .header__btn::before {
   content: "";
   position: absolute;
@@ -252,12 +281,6 @@ body {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-}
-
-.header__btn:hover::before,
-.header__btn:focus::before {
-  left: 0;
-  width: 100%;
 }
 
 html.menu-open .header__menu {
@@ -449,16 +472,6 @@ html.menu-open .page {
   transition: 0.3s ease-in;
 }
 
-.about__btn:hover,
-.about__btn:focus {
-  color: #4499D9;
-  border: 0.5px solid #4499D9;
-  -webkit-animation: pulse 0.5s;
-          animation: pulse 0.5s;
-  -webkit-box-shadow: 0 0 0 2em transparent;
-          box-shadow: 0 0 0 2em transparent;
-}
-
 .about__btn::before {
   content: "";
   position: absolute;
@@ -473,12 +486,6 @@ html.menu-open .page {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-}
-
-.about__btn:hover::before,
-.about__btn:focus::before {
-  left: 0;
-  width: 100%;
 }
 
 .about__btn::after {
@@ -822,16 +829,6 @@ html.menu-open .page {
   transition: 0.3s ease-in;
 }
 
-.glasess__btn:hover,
-.glasess__btn:focus {
-  color: #4499D9;
-  border: 0.5px solid #4499D9;
-  -webkit-animation: pulse 0.5s;
-          animation: pulse 0.5s;
-  -webkit-box-shadow: 0 0 0 2em transparent;
-          box-shadow: 0 0 0 2em transparent;
-}
-
 .glasess__btn::before {
   content: "";
   position: absolute;
@@ -846,12 +843,6 @@ html.menu-open .page {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-}
-
-.glasess__btn:hover::before,
-.glasess__btn:focus::before {
-  left: 0;
-  width: 100%;
 }
 
 .glasess__btn::after {
@@ -942,16 +933,6 @@ html.menu-open .page {
   transition: 0.3s ease-in;
 }
 
-.xbox__btn:hover,
-.xbox__btn:focus {
-  color: #4499D9;
-  border: 0.5px solid #4499D9;
-  -webkit-animation: pulse 0.5s;
-          animation: pulse 0.5s;
-  -webkit-box-shadow: 0 0 0 2em transparent;
-          box-shadow: 0 0 0 2em transparent;
-}
-
 .xbox__btn::before {
   content: "";
   position: absolute;
@@ -966,12 +947,6 @@ html.menu-open .page {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-}
-
-.xbox__btn:hover::before,
-.xbox__btn:focus::before {
-  left: 0;
-  width: 100%;
 }
 
 .xbox__picture {
@@ -989,8 +964,8 @@ html.menu-open .page {
   position: absolute;
   left: 58%;
   top: 10%;
-  -webkit-animation: rotateGears 9s linear infinite;
-          animation: rotateGears 9s linear infinite;
+  -webkit-animation: rotateGears 15s linear infinite;
+          animation: rotateGears 15s linear infinite;
 }
 
 .xbox__picture .xbox__small-gear {
@@ -998,8 +973,8 @@ html.menu-open .page {
   position: absolute;
   top: 25%;
   left: 45%;
-  -webkit-animation: rotateGearsRevers 9s linear infinite;
-          animation: rotateGearsRevers 9s linear infinite;
+  -webkit-animation: rotateGearsRevers 15s linear infinite;
+          animation: rotateGearsRevers 15s linear infinite;
 }
 
 .xbox::after {
@@ -1020,6 +995,11 @@ html.menu-open .page {
   line-height: 1.5rem;
   color: #446381;
   text-align: center;
+}
+
+.plans__swiper {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 .plans__title {
@@ -1168,16 +1148,6 @@ html.menu-open .page {
   width: 100%;
 }
 
-.plans__btn:hover,
-.plans__btn:focus {
-  color: #4499D9;
-  border: 0.5px solid #4499D9;
-  -webkit-animation: pulse 0.5s;
-          animation: pulse 0.5s;
-  -webkit-box-shadow: 0 0 0 2em transparent;
-          box-shadow: 0 0 0 2em transparent;
-}
-
 .plans__btn::before {
   content: "";
   position: absolute;
@@ -1192,12 +1162,6 @@ html.menu-open .page {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-}
-
-.plans__btn:hover::before,
-.plans__btn:focus::before {
-  left: 0;
-  width: 100%;
 }
 
 @-webkit-keyframes pulse {
@@ -2748,10 +2712,90 @@ html.menu-open .page {
 }
 
 @media (any-hover: hover) {
+  .header__btn:hover,
+  .header__btn:focus {
+    color: #4499D9;
+    border: 0.5px solid #4499D9;
+    -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+    -webkit-box-shadow: 0 0 0 2em transparent;
+            box-shadow: 0 0 0 2em transparent;
+  }
+
+  .header__btn:hover::before,
+  .header__btn:focus::before {
+    left: 0;
+    width: 100%;
+  }
+
+  .about__btn:hover,
+  .about__btn:focus {
+    color: #4499D9;
+    border: 0.5px solid #4499D9;
+    -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+    -webkit-box-shadow: 0 0 0 2em transparent;
+            box-shadow: 0 0 0 2em transparent;
+  }
+
+  .about__btn:hover::before,
+  .about__btn:focus::before {
+    left: 0;
+    width: 100%;
+  }
+
   .about__picture .person__teenager:hover {
     -webkit-transform: rotate(2deg);
         -ms-transform: rotate(2deg);
             transform: rotate(2deg);
+  }
+
+  .glasess__btn:hover,
+  .glasess__btn:focus {
+    color: #4499D9;
+    border: 0.5px solid #4499D9;
+    -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+    -webkit-box-shadow: 0 0 0 2em transparent;
+            box-shadow: 0 0 0 2em transparent;
+  }
+
+  .glasess__btn:hover::before,
+  .glasess__btn:focus::before {
+    left: 0;
+    width: 100%;
+  }
+
+  .xbox__btn:hover,
+  .xbox__btn:focus {
+    color: #4499D9;
+    border: 0.5px solid #4499D9;
+    -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+    -webkit-box-shadow: 0 0 0 2em transparent;
+            box-shadow: 0 0 0 2em transparent;
+  }
+
+  .xbox__btn:hover::before,
+  .xbox__btn:focus::before {
+    left: 0;
+    width: 100%;
+  }
+
+  .plans__btn:hover,
+  .plans__btn:focus {
+    color: #4499D9;
+    border: 0.5px solid #4499D9;
+    -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+    -webkit-box-shadow: 0 0 0 2em transparent;
+            box-shadow: 0 0 0 2em transparent;
+  }
+
+  .plans__btn:hover::before,
+  .plans__btn:focus::before {
+    left: 0;
+    width: 100%;
   }
 }
 

@@ -2821,6 +2821,18 @@
         }
     }
     window.addEventListener("scroll", reveal);
+    const UPBTN = document.querySelector(".upbtn");
+    UPBTN.addEventListener("click", toTopWindow);
+    function toTopWindow() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function hideUpBtn() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) UPBTN.style.display = "flex"; else UPBTN.style.display = "none";
+    }
+    window.onscroll = function() {
+        hideUpBtn();
+    };
     window["FLS"] = true;
     isWebp();
     menuInit();
